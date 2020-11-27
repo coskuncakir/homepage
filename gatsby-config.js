@@ -1,13 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: "Grycode",
+    title: "Coskun Cakir",
     titleTemplate: "%s",
     description:
-      "Tell us about your project, get a quick estimate and a plan for making it live.",
-    url: "https://grycode.co.uk",
+      "I develop web applications with the latest and innovative technologies to make people’s life simple.",
     image: "/assets/images/website_setup.png",
-    twitterUsername: "@grycode",
-    siteUrl: `https://grycode.co.uk`,
+    twitterUsername: "@coscakir",
+    siteUrl: `https://coskuncakir.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,8 +14,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Grycode`,
-        short_name: `Grycode`,
+        name: `Coskun Cakir`,
+        short_name: `Coskun Cakir`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#7433ff`,
