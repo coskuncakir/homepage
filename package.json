@@ -11,7 +11,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "icons": "svgr static/assets/images/icons -d src/components/icons --icon --replace-attr-values \"#fff=currentColor\""
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -30,6 +31,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@svgr/cli": "^5.5.0",
     "prettier": "2.1.2"
   },
   "repository": {
