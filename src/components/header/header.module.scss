@@ -2,3 +2,20 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+:global(.hamburger-react) div {
+  height: 4px !important;
+}
+
+.buttons {
+  display: flex;
+
+  :global(.hamburger-react) {
+    margin-left: 1rem;
+  }
+}
