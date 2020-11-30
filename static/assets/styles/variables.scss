@@ -1,8 +1,15 @@
-:root {
-  --c-primary: #6018f2;
-  --c-secondary: #434752;
-  --c-accent: #da3654;
+body.light {
+  --c-primary: #da3654;
+  --c-secondary: #f5f9fb;
   --c-background: #ffffff;
-  --c-text: #0c0c0d;
-  --c-text-muted: #808080;
+  --c-text: #3c4856;
+  --c-text-muted: rgba(60, 72, 86, 0.76);
+}
+
+body.dark {
+  --c-primary: #da3654;
+  --c-secondary: #1e1528;
+  --c-background: #110719;
+  --c-text: rgba(255, 255, 255, 0.9);
+  --c-text-muted: rgba(255, 255, 255, 0.65);
 }

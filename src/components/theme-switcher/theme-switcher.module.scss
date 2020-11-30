@@ -7,4 +7,15 @@
   align-items: center;
   justify-content: center;
   color: inherit;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--c-primary);
+  }
+
+  &:focus {
+    outline: none;
+  }
 }

@@ -1,10 +1,16 @@
 .header {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @media (min-width: 992px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -14,15 +20,51 @@
 
 .buttons {
   display: flex;
+}
 
-  :global(.hamburger-react) {
-    margin-left: 1rem;
+:global(.hamburger-react) {
+  margin-left: 1rem;
+
+  @media (min-width: 992px) {
+    display: none;
   }
 }
 
 .nav {
   display: none;
-  transition: all 0.2s ease-in-out;
+
+  @media (min-width: 992px) {
+    display: flex;
+  }
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: 992px) {
+    display: flex;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+
+    a {
+      transition: 0.2s ease 0s;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        color: var(--c-primary);
+      }
+    }
+
+    &:first-of-type a {
+      padding-left: 0;
+    }
+  }
 }
 
 .open {
@@ -38,26 +80,16 @@
     height: 100vh;
     width: 100%;
   }
-}
 
-.menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-size: 2rem;
-  font-weight: bold;
+  .menu {
+    font-size: 2rem;
+    width: 100%;
 
-  li {
-    display: flex;
-
-    a {
-      padding: 0.6rem 1rem 0.6rem 3rem;
-      width: 100%;
-      transition: 0.3s ease-in-out;
-
-      &:hover {
-        color: var(--c-primary);
+    li {
+      a {
+        font-weight: 700;
+        padding: 0.6rem 1rem 0.6rem 3rem;
+        width: 100%;
       }
     }
   }

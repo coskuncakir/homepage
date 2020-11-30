@@ -57,6 +57,7 @@ export default function Header() {
             label="Toggle menu"
             distance="sm"
             hideOutline={false}
+            className={styles.hamburger}
           />
         </div>
       </Container>
