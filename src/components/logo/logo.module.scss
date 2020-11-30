@@ -48,4 +48,9 @@
 .title {
   display: flex;
   flex-direction: column;
+
+  span {
+    font-family: "Lora", serif;
+    color: var(--c-text-muted);
+  }
 }

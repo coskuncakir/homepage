@@ -5,6 +5,7 @@
   font-weight: 700;
   line-height: 1.3;
   color: inherit;
+  font-family: "Lora", serif;
 }
 
 .h1 {
@@ -16,6 +17,10 @@
 
   @media (min-width: 992px) {
     font-size: 3rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 3.375rem;
   }
 }
 
@@ -42,6 +47,7 @@
   letter-spacing: 0.1rem;
   color: var(--c-text-muted);
   font-weight: 700;
+  font-family: "Inter", sans-serif;
 
   @media (min-width: 768px) {
     font-size: 0.875rem;
@@ -56,8 +62,9 @@
   margin-top: 1.5rem;
   margin-bottom: 2rem;
   font-weight: normal;
+  font-family: "Inter", sans-serif;
 
   @media (min-width: 768px) {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }

@@ -25,7 +25,9 @@ export default function Home() {
             </Title>
             <Title headingLevel="p">
               I develop web applications with the latest and innovative
-              technologies to make people’s life simple.
+              technologies to make people’s life simple. <br />I have a passion
+              for Design Systems, Web Accessibility and JAMstack applications
+              with a desire to constantly develop new skills.
             </Title>
             <Button>Hello</Button>
           </section>
