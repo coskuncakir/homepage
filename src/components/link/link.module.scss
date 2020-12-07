@@ -1,7 +1,6 @@
 .a {
   color: var(--c-primary);
   border-bottom: 1px solid var(--c-secondary);
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   &:hover {
     border-bottom-color: var(--c-primary);

@@ -1,3 +1,7 @@
 export { default as ColorMode } from './ColorMode'
+export { default as Facebook } from './Facebook'
+export { default as Github } from './Github'
+export { default as Linkedin } from './Linkedin'
 export { default as OvalBorder } from './OvalBorder'
 export { default as RightArrow } from './RightArrow'
+export { default as Twitter } from './Twitter'

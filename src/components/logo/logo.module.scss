@@ -1,10 +1,7 @@
 .logo {
   display: flex;
-  transition: color 0.2s ease;
 
   &:hover {
-    color: var(--c-primary);
-
     .oval {
       transform: translateX(-50%) translateY(-50%) rotate(90deg);
     }

@@ -1,0 +1,43 @@
+.footer {
+  color: var(--c-text-muted);
+  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.copyright {
+  margin: 0;
+  line-height: 2;
+}
+
+.socialLinks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+
+    &:hover {
+      color: var(--c-primary);
+    }
+  }
+}
