@@ -1,40 +1,46 @@
 import React from "react"
+import Link from "../link"
+import Title from "../title"
+import Img from "gatsby-image"
 import { RightArrow } from "../icons"
 import styles from "./card.module.scss"
 
 export default function Card({
   title,
-  url,
-  target = "_blank",
-  author,
-  tag,
-  img,
+  subTitle,
+  link,
+  target,
+  image,
   children,
   ...props
 }) {
   return (
-    <div className={styles.card} {...props}>
-      <a href={url} target={target} rel="noreferrer">
-        {img && (
-          <div>
-            <img src={img} alt={title} />
-          </div>
-        )}
-        <ul>
-          <li>
-            <h3>{title}</h3>
-            <p>
-              by {author} - <span>{tag}</span>
-            </p>
-            <p>{truncate(children, 200)}</p>
-          </li>
-          <li>
-            <p>Check it out</p>
-            <RightArrow />
-          </li>
-        </ul>
-      </a>
-    </div>
+    <Link
+      className={styles.card}
+      href={target ? link : null}
+      to={!target ? `${link}` : null}
+      target={target}
+      rel={target ? `noopener noreferrer` : null}
+      {...props}
+    >
+      {image && (
+        <div className={styles.image}>
+          {target && <img src={image} alt={title} />}
+          {!target && <Img fluid={image} alt={title} />}
+        </div>
+      )}
+      <div className={styles.content}>
+        <header className={styles.header}>
+          <Title headingLevel="h3">{title}</Title>
+          <p>{subTitle}</p>
+        </header>
+        <div className={styles.body}>{truncate(children, 200)}</div>
+        <footer className={styles.footer}>
+          <span>Check it out</span>
+          <RightArrow />
+        </footer>
+      </div>
+    </Link>
   )
 }
 

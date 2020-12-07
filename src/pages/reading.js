@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Container from "../components/container"
 import Title from "../components/title"
 import { graphql } from "gatsby"
+import Link from "../components/link"
 import Card from "../components/card"
 
 export default function IndexPage({ data }) {
@@ -14,25 +15,25 @@ export default function IndexPage({ data }) {
         <Container>
           <Title headingLevel="h1">Reading</Title>
           <Title headingLevel="p">
-            Reading activities from my{" "}
-            <a
+            Last 10 reading activities from my{" "}
+            <Link
               href="https://www.goodreads.com/user/show/61767082-coskun-cakir"
               target="_blank"
               rel="noopener noreferrer"
             >
               Goodreads
-            </a>{" "}
+            </Link>{" "}
             profile.
           </Title>
           {data.goodreads.shelves.map(shelf =>
             shelf.reviews.slice(0, 10).map(review => (
               <Card
-                tag={shelf.name}
                 key={review.book.id}
                 title={review.book.title}
-                url={review.book.link}
-                img={review.book.image_url}
-                author={review.book.authors[0].name}
+                subTitle={`by ${review.book.authors[0].name} [${shelf.name}]`}
+                link={review.book.link}
+                target="_blank"
+                image={review.book.image_url}
               >
                 {review.book.description}
               </Card>
