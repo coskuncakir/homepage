@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Coskun Cakir",
+    title: "Coskun Cakir - Front-End Engineer",
     titleTemplate: "%s",
     description:
       "I develop web applications with the latest and innovative technologies to make people’s life simple.",
@@ -34,6 +34,13 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaultQuality: 100,
+      },
+    },
+    {
+      resolve: "@jamesdanylik/gatsby-source-goodreads",
+      options: {
+        key: "45vD5s0OBPw0OMXApqtZw",
+        id: "61767082-coskun-cakir",
       },
     },
     `gatsby-transformer-sharp`,
