@@ -3,4 +3,4 @@ title: Notes
 slug: notes
 date: 2020-12-08T15:47:13.325Z
 ---
-An on-going experimentation of unpolished note taking, that includes the evolution of my working and thinking process.
+The section where I ask myself questions, look for answers to questions I ask, write down the aspects I want to change or strengthen, and write down what I feel.
