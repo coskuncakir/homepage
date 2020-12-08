@@ -18,7 +18,7 @@ export default function Logo({ className }) {
       </div>
       <div className={styles.title}>
         <strong>Coskun Cakir</strong>
-        <span>Front-End Engineer</span>
+        <span>Front-End Developer</span>
       </div>
     </Link>
   )

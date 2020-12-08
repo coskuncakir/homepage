@@ -9,8 +9,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <Container className={styles.container}>
         <p className={styles.copyright}>
-          © {new Date().getFullYear()} Coskun Cakir.
-          <br />I crafted this website with{" "}
+          Handcrafted with{" "}
           <Link
             href="https://www.gatsbyjs.com"
             target="_blank"
@@ -37,6 +36,7 @@ export default function Footer() {
           >
             source code on github.
           </Link>
+          <br />© {new Date().getFullYear()} Coskun Cakir.
         </p>
         <ul className={styles.socialLinks}>
           <li>

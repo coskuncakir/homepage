@@ -1,8 +1,9 @@
 .a {
   color: var(--c-primary);
-  border-bottom: 1px solid var(--c-secondary);
+  border-bottom: 1px solid var(--c-primary);
 
   &:hover {
     border-bottom-color: var(--c-primary);
+    opacity: 0.8;
   }
 }

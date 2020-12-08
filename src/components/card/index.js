@@ -21,6 +21,7 @@ export default function Card({
       to={!target ? `${link}` : null}
       target={target}
       rel={target ? `noopener noreferrer` : null}
+      aria-label={title}
       {...props}
     >
       {image && (

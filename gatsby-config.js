@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Coskun Cakir - Front-End Engineer",
+    title: "Coskun Cakir - Front-End Developer",
     titleTemplate: "%s",
     description:
       "I develop web applications with the latest and innovative technologies to make people’s life simple.",
@@ -43,7 +43,34 @@ module.exports = {
         id: "61767082-coskun-cakir",
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-netlify-cms-paths`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-relative-images`,
+          `gatsby-remark-responsive-iframe`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              linkImagesToOriginal: false,
+              tracedSVG: true,
+              showCaptions: true,
+            },
+          },
+        ],
+      },
+    },
   ],
 }

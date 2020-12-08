@@ -1,0 +1,47 @@
+backend:
+  name: github
+  repo: coscakir/homepage
+media_folder: static/assets/images/uploads
+public_folder: /assets/images/uploads
+collections:
+  - name: blog
+    label: Blog
+    folder: src/data/blog
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: slug, label: Slug }
+      - { name: date, label: Date, widget: datetime }
+      - { name: image, label: Featured Image, widget: image, required: false }
+      - { name: body, label: Body, widget: markdown }
+  - name: page
+    label: Pages
+    folder: src/data/pages
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title }
+      - { name: slug, label: Slug }
+      - { name: date, label: Date, widget: datetime }
+      - { name: body, label: Body, widget: markdown }
+  - name: note
+    label: Notes
+    folder: src/data/notes
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title }
+      - { name: slug, label: Slug }
+      - { name: date, label: Date, widget: datetime }
+      - { name: body, label: Body, widget: markdown }
+  - name: oss
+    label: Open Source
+    folder: src/data/oss
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title }
+      - { name: slug, label: Slug }
+      - { name: date, label: Date, widget: datetime }
+      - { name: body, label: Body, widget: markdown }

@@ -14,51 +14,53 @@ export default function Header() {
     <header className={cn(styles.header, open ? styles.open : null)}>
       <Container className={styles.container}>
         <Logo />
-        <nav className={styles.nav}>
-          <ul className={styles.menu}>
-            <li>
-              <Link to="/blog" activeClassName={styles.active}>
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/notes" activeClassName={styles.active}>
-                Notes
-              </Link>
-            </li>
-            <li>
-              <Link to="/oss" activeClassName={styles.active}>
-                OSS
-              </Link>
-            </li>
-            <li>
-              <Link to="/reading" activeClassName={styles.active}>
-                Reading
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" activeClassName={styles.active}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" activeClassName={styles.active}>
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <div className={styles.buttons}>
-          <ThemeSwitcher />
-          <Hamburger
-            rounded
-            toggled={open}
-            toggle={setOpen}
-            label="Toggle menu"
-            distance="sm"
-            hideOutline={false}
-            className={styles.hamburger}
-          />
+        <div className={styles.navContainer}>
+          <nav className={styles.nav}>
+            <ul className={styles.menu}>
+              <li>
+                <Link to="/blog" activeClassName={styles.active}>
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/notes" activeClassName={styles.active}>
+                  Notes
+                </Link>
+              </li>
+              <li>
+                <Link to="/oss" activeClassName={styles.active}>
+                  OSS
+                </Link>
+              </li>
+              <li>
+                <Link to="/reading" activeClassName={styles.active}>
+                  Reading
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" activeClassName={styles.active}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" activeClassName={styles.active}>
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <div className={styles.buttons}>
+            <ThemeSwitcher />
+            <Hamburger
+              rounded
+              toggled={open}
+              toggle={setOpen}
+              label="Toggle menu"
+              distance="sm"
+              hideOutline={false}
+              className={styles.hamburger}
+            />
+          </div>
         </div>
       </Container>
     </header>

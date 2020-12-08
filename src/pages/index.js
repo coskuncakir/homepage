@@ -21,7 +21,7 @@ export default function Home() {
               NICE TO MEET YOU!
             </Title>
             <Title headingLevel="h1">
-              I'm Coskun and I am a Front-End Engineer
+              I'm Coskun and I am a Front-End Developer
             </Title>
             <Title headingLevel="p">
               I develop web applications with the latest and innovative
