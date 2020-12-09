@@ -35,13 +35,13 @@ collections:
       - { name: slug, label: Slug }
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }
-  - name: oss
+  - name: open-source
     label: Open Source
-    folder: src/data/oss
+    folder: src/data/open-source
     create: true
-    slug: "{{slug}}"
     fields:
       - { name: title, label: Title }
-      - { name: slug, label: Slug }
+      - { name: repository, label: Repository URL }
+      - { name: preview, label: Preview URL, required: false }
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }

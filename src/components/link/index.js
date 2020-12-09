@@ -3,7 +3,12 @@ import { Link as GatsbyLink } from "gatsby"
 import cn from "classnames"
 import styles from "./link.module.scss"
 
-export default function Link({ className, children, ...props }) {
+export default function Link({
+  defaultLink = true,
+  className,
+  children,
+  ...props
+}) {
   let CustomLink
   if (props.href || props.target) {
     CustomLink = `a`
@@ -13,10 +18,7 @@ export default function Link({ className, children, ...props }) {
 
   return (
     <CustomLink
-      className={cn(
-        (props.href || props.target) && !className ? styles.a : styles.link,
-        className
-      )}
+      className={cn(defaultLink ? styles.link : null, className)}
       {...props}
     >
       {children}

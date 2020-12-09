@@ -1,6 +1,7 @@
-.a {
+.link {
   color: var(--c-primary);
   border-bottom: 1px solid var(--c-primary);
+  font-weight: 500;
 
   &:hover {
     border-bottom-color: var(--c-primary);
