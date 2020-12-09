@@ -34,7 +34,7 @@ export default function Card({
       <div className={styles.content}>
         <header className={styles.header}>
           <Title headingLevel="h3">{title}</Title>
-          <p>{subTitle}</p>
+          {subTitle && <p>{subTitle}</p>}
         </header>
         <div className={styles.body}>{truncate(children, 200)}</div>
         <footer className={styles.footer}>

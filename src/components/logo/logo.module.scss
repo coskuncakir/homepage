@@ -3,7 +3,7 @@
 
   &:hover {
     .oval {
-      transform: translateX(-50%) translateY(-50%) rotate(90deg);
+      transform: translateX(-50%) translateY(-50%) rotate(180deg);
     }
   }
 }
@@ -31,7 +31,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transition: all 0.2s ease-in-out 0.2s;
+  transition: all 0.3s ease-in-out 0.3s;
   transform: translateX(-50%) translateY(-50%) rotate(0deg);
   display: flex;
   flex-direction: row;

@@ -40,7 +40,7 @@ export default function Home({ data }) {
                   <li className={styles.date}>{post.frontmatter.date}</li>
                   <li className={styles.title}>
                     <Link
-                      to={post.frontmatter.slug}
+                      to={`/blog/${post.frontmatter.slug}`}
                       aria-label={post.frontmatter.title}
                     >
                       {post.frontmatter.title}
@@ -67,7 +67,7 @@ export default function Home({ data }) {
                   <li className={styles.date}>{note.frontmatter.date}</li>
                   <li className={styles.title}>
                     <Link
-                      to={note.frontmatter.slug}
+                      to={`/notes/${note.frontmatter.slug}`}
                       aria-label={note.frontmatter.title}
                     >
                       {note.frontmatter.title}

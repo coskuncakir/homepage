@@ -28,7 +28,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link to="/oss" activeClassName={styles.active}>
+                <Link to="/open-source" activeClassName={styles.active}>
                   OSS
                 </Link>
               </li>
