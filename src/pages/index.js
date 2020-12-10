@@ -21,8 +21,8 @@ export default function Home({ data }) {
               </span>{" "}
               NICE TO MEET YOU!
             </Title>
-            <Title headingLevel="h1">
-              I'm Coskun and I am a Front-End Developer
+            <Title headingLevel="h1" className={styles.title}>
+              I'm Coskun and I am a <span>Front-End Developer</span>
             </Title>
             <Title headingLevel="p">
               I develop web applications with the latest and innovative
@@ -151,7 +151,7 @@ export const query = graphql`
     }
 
     openSource: allMdx(
-      filter: { fileAbsolutePath: { glob: "**/src/data/open-source/**/*.md" } }
+      filter: { fileAbsolutePath: { glob: "**/src/data/projects/**/*.md" } }
       limit: 5
     ) {
       projects: edges {

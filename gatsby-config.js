@@ -11,6 +11,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -23,6 +24,7 @@ module.exports = {
         icon: `${__dirname}/static/assets/images/icon.png`,
       },
     },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

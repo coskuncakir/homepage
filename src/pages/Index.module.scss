@@ -1,3 +1,23 @@
+.hero {
+  .title {
+    span {
+      background-color: var(--c-primary);
+      background-image: linear-gradient(
+        90deg,
+        var(--c-primary),
+        #bc027f,
+        #f67300
+      );
+      background-size: 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+  }
+}
+
 .section {
   padding-top: 1rem;
   padding-bottom: 1rem;

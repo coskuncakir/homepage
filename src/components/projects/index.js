@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Card from "../card"
 
-export default function OpenSource() {
+export default function Projects() {
   return (
     <StaticQuery
       query={query}
@@ -26,7 +26,7 @@ export default function OpenSource() {
 export const query = graphql`
   query {
     allMdx(
-      filter: { fileAbsolutePath: { glob: "**/src/data/open-source/**/*.md" } }
+      filter: { fileAbsolutePath: { glob: "**/src/data/projects/**/*.md" } }
     ) {
       projects: edges {
         project: node {

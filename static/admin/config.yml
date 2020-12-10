@@ -35,9 +35,9 @@ collections:
       - { name: slug, label: Slug }
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }
-  - name: open-source
-    label: Open Source
-    folder: src/data/open-source
+  - name: project
+    label: Projects
+    folder: src/data/projects
     create: true
     fields:
       - { name: title, label: Title }
