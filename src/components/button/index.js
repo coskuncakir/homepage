@@ -1,16 +1,17 @@
 import React from "react"
-import { Link } from "gatsby"
 import cn from "classnames"
+import { Link } from "gatsby"
 import styles from "./button.module.scss"
 
-export default function Button({ type, children, className, ...props }) {
-  let Button = "button"
+export default function Button({ children, className, ...props }) {
+  let Button
   if (props.to) {
     Button = Link
+  } else {
+    Button = "button"
   }
-
   return (
-    <Button className={cn(styles.button, styles[type], className)} {...props}>
+    <Button className={cn(styles.button, className)} {...props}>
       {children}
     </Button>
   )

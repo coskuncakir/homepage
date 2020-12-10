@@ -5,6 +5,7 @@ import Container from "../components/container"
 import SEO from "../components/seo"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Title from "../components/title"
+import styles from "./page.module.scss"
 
 export default function PageTemplate({ data }) {
   const {
@@ -15,7 +16,7 @@ export default function PageTemplate({ data }) {
     <>
       <SEO title={frontmatter.title} />
       <Layout>
-        <Container>
+        <Container className={styles.container}>
           <Title headingLevel="h1">{frontmatter.title}</Title>
           <div>
             <MDXRenderer>{body}</MDXRenderer>

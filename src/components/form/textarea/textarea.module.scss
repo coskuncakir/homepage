@@ -1,0 +1,17 @@
+.textarea {
+  appearance: none;
+  resize: vertical;
+  min-height: 80px;
+  border-radius: 28px;
+  background-color: var(--c-secondary);
+  padding: 1.2rem 1.6rem;
+  box-shadow: none;
+  border: 2px solid var(--c-secondary);
+  color: var(--c-text-secondary);
+  line-height: normal;
+
+  &:focus {
+    border: 2px solid var(--c-primary);
+    outline: none;
+  }
+}

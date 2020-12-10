@@ -22,7 +22,8 @@ export default function Home({ data }) {
               NICE TO MEET YOU!
             </Title>
             <Title headingLevel="h1" className={styles.title}>
-              I'm Coskun and I am a <span>Front-End Developer</span>
+              I'm Coskun,
+              <br />I am a <span>Front-End Developer</span>
             </Title>
             <Title headingLevel="p">
               I develop web applications with the latest and innovative
@@ -107,7 +108,7 @@ export default function Home({ data }) {
             )}
 
             {data.note.notes.length >= 5 && (
-              <Link to="/notes">View all notes</Link>
+              <Link to="/projects">View all projects</Link>
             )}
           </section>
         </Container>
