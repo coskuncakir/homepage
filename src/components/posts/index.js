@@ -1,43 +1,19 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
 import Card from "../card"
+import usePosts from "../../hooks/use-posts"
 
 export default function Posts() {
-  return (
-    <StaticQuery
-      query={query}
-      render={data =>
-        data.allMdx.posts.map(({ post }) => (
-          <Card
-            key={post.id}
-            title={post.frontmatter.title}
-            link={post.frontmatter.slug}
-          >
-            {post.excerpt}
-          </Card>
-        ))
-      }
-    />
+  const posts = usePosts()
+
+  return posts.length > 0 ? (
+    posts.map(post => (
+      <Card key={post.id} title={post.title} link={post.slug}>
+        {post.excerpt}
+      </Card>
+    ))
+  ) : (
+    <p style={{ color: "var(--c-text-muted)" }}>
+      No notes scheduled for takeoff
+    </p>
   )
 }
-
-export const query = graphql`
-  query {
-    allMdx(
-      filter: { fileAbsolutePath: { glob: "**/src/data/blog/**/*.md" } }
-      sort: { fields: frontmatter___date, order: DESC }
-    ) {
-      posts: edges {
-        post: node {
-          frontmatter {
-            slug
-            title
-            date(formatString: "DD.MM.YY")
-          }
-          excerpt
-          id
-        }
-      }
-    }
-  }
-`

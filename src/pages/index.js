@@ -3,11 +3,17 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import Title from "../components/title"
-import { graphql } from "gatsby"
-import styles from "./Index.module.scss"
 import Link from "../components/link"
+import usePosts from "../hooks/use-posts"
+import useNotes from "../hooks/use-notes"
+import useProjects from "../hooks/use-projects"
+import styles from "./Index.module.scss"
 
-export default function Home({ data }) {
+export default function Home() {
+  const posts = usePosts()
+  const notes = useNotes()
+  const projects = useProjects()
+
   return (
     <>
       <SEO />
@@ -35,16 +41,13 @@ export default function Home({ data }) {
 
           <section className={styles.section}>
             <Title headingLevel="h3">Recent Blog Posts</Title>
-            {data.blog.posts.length > 0 ? (
-              data.blog.posts.map(({ post }) => (
+            {posts.length > 0 ? (
+              posts.slice(0, 5).map(post => (
                 <ul className={styles.list} key={post.id}>
-                  <li className={styles.date}>{post.frontmatter.date}</li>
+                  <li className={styles.date}>{post.date}</li>
                   <li className={styles.title}>
-                    <Link
-                      to={`/blog/${post.frontmatter.slug}`}
-                      aria-label={post.frontmatter.title}
-                    >
-                      {post.frontmatter.title}
+                    <Link to={`/blog/${post.slug}`} aria-label={post.title}>
+                      {post.title}
                     </Link>
                   </li>
                 </ul>
@@ -55,23 +58,18 @@ export default function Home({ data }) {
               </p>
             )}
 
-            {data.blog.posts.length >= 5 && (
-              <Link to="/blog">View all posts</Link>
-            )}
+            {posts.length >= 5 && <Link to="/blog">View all posts</Link>}
           </section>
 
           <section className={styles.section}>
             <Title headingLevel="h3">Recent Notes</Title>
-            {data.note.notes.length > 0 ? (
-              data.note.notes.map(({ note }) => (
+            {notes.length > 0 ? (
+              notes.slice(0, 5).map(note => (
                 <ul className={styles.list} key={note.id}>
-                  <li className={styles.date}>{note.frontmatter.date}</li>
+                  <li className={styles.date}>{note.date}</li>
                   <li className={styles.title}>
-                    <Link
-                      to={`/notes/${note.frontmatter.slug}`}
-                      aria-label={note.frontmatter.title}
-                    >
-                      {note.frontmatter.title}
+                    <Link to={`/notes/${note.slug}`} aria-label={note.title}>
+                      {note.title}
                     </Link>
                   </li>
                 </ul>
@@ -80,25 +78,23 @@ export default function Home({ data }) {
               <p className={styles.emptyState}>Add a note and being loved!</p>
             )}
 
-            {data.note.notes.length >= 5 && (
-              <Link to="/notes">View all notes</Link>
-            )}
+            {notes.length >= 5 && <Link to="/notes">View all notes</Link>}
           </section>
 
           <section className={styles.section}>
             <Title headingLevel="h3">Recent Open Source Projects</Title>
-            {data.openSource.projects.length > 0 ? (
-              data.openSource.projects.map(({ project }) => (
+            {projects.length > 0 ? (
+              projects.slice(0, 5).map(project => (
                 <ul className={styles.list} key={project.id}>
-                  <li className={styles.date}>{project.frontmatter.date}</li>
+                  <li className={styles.date}>{project.date}</li>
                   <li className={styles.title}>
                     <Link
-                      href={project.frontmatter.repository}
+                      href={project.repository}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={project.frontmatter.title}
+                      aria-label={project.title}
                     >
-                      {project.frontmatter.title}
+                      {project.title}
                     </Link>
                   </li>
                 </ul>
@@ -107,7 +103,7 @@ export default function Home({ data }) {
               <p className={styles.emptyState}>Wow, such empty</p>
             )}
 
-            {data.note.notes.length >= 5 && (
+            {projects.length >= 5 && (
               <Link to="/projects">View all projects</Link>
             )}
           </section>
@@ -116,59 +112,3 @@ export default function Home({ data }) {
     </>
   )
 }
-
-export const query = graphql`
-  query {
-    blog: allMdx(
-      filter: { fileAbsolutePath: { glob: "**/src/data/blog/**/*.md" } }
-      sort: { fields: frontmatter___date, order: DESC }
-      limit: 5
-    ) {
-      posts: edges {
-        post: node {
-          frontmatter {
-            slug
-            title
-            date(formatString: "DD.MM.YY")
-          }
-          id
-        }
-      }
-    }
-
-    note: allMdx(
-      filter: { fileAbsolutePath: { glob: "**/src/data/notes/**/*.md" } }
-      sort: { fields: frontmatter___date, order: DESC }
-      limit: 5
-    ) {
-      notes: edges {
-        note: node {
-          frontmatter {
-            slug
-            title
-            date(formatString: "DD.MM.YY")
-          }
-          id
-        }
-      }
-    }
-
-    openSource: allMdx(
-      filter: { fileAbsolutePath: { glob: "**/src/data/projects/**/*.md" } }
-      sort: { fields: frontmatter___date, order: DESC }
-      limit: 5
-    ) {
-      projects: edges {
-        project: node {
-          frontmatter {
-            title
-            repository
-            preview
-            date(formatString: "DD.MM.YY")
-          }
-          id
-        }
-      }
-    }
-  }
-`

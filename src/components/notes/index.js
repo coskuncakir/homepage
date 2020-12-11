@@ -1,42 +1,16 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
 import Card from "../card"
+import useNotes from "../../hooks/use-notes"
 
 export default function Notes() {
-  return (
-    <StaticQuery
-      query={query}
-      render={data =>
-        data.allMdx.notes.map(({ note }) => (
-          <Card
-            key={note.id}
-            title={note.frontmatter.title}
-            link={note.frontmatter.slug}
-          >
-            {note.excerpt}
-          </Card>
-        ))
-      }
-    />
+  const notes = useNotes()
+  return notes.length > 0 ? (
+    notes.map(note => (
+      <Card key={note.id} title={note.title} link={note.slug}>
+        {note.excerpt}
+      </Card>
+    ))
+  ) : (
+    <p style={{ color: "var(--c-text-muted)" }}>Add a note and being loved!</p>
   )
 }
-
-export const query = graphql`
-  query {
-    allMdx(
-      filter: { fileAbsolutePath: { glob: "**/src/data/notes/**/*.md" } }
-    ) {
-      notes: edges {
-        note: node {
-          frontmatter {
-            slug
-            title
-            date(formatString: "DD.MM.YY")
-          }
-          excerpt
-          id
-        }
-      }
-    }
-  }
-`
