@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: `https://coskuncakir.com`,
   },
   plugins: [
+    `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-preload-fonts`,
@@ -18,8 +19,8 @@ module.exports = {
         name: `Coskun Cakir`,
         short_name: `Coskun Cakir`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#7433ff`,
+        background_color: `#110719`,
+        theme_color: `#da3654`,
         display: `standalone`,
         icon: `${__dirname}/static/assets/images/icon.png`,
       },
@@ -72,6 +73,13 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: "G-NR9KJEK14Q",
+        head: true,
       },
     },
   ],
