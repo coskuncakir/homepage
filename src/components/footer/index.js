@@ -8,36 +8,23 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <Container className={styles.container}>
-        <p className={styles.copyright}>
-          Handcrafted with{" "}
-          <Link
-            href="https://www.gatsbyjs.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Gatsby.js"
-          >
-            gatsby.js
-          </Link>
-          , deployed to {""}
-          <Link
-            href="https://www.netlify.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Netlify"
-          >
-            netlify
-          </Link>
-          {""} and shared the {""}
-          <Link
-            href="https://github.com/coscakir/homepage"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub"
-          >
-            source code on github.
-          </Link>
-          <br />© {new Date().getFullYear()} Coskun Cakir.
-        </p>
+        <ul className={styles.menu}>
+          <li>
+            <Link to="/projects" defaultLink={false}>
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link to="/reading" defaultLink={false}>
+              Reading
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" defaultLink={false}>
+              About
+            </Link>
+          </li>
+        </ul>
         <ul className={styles.socialLinks}>
           <li>
             <a
@@ -70,6 +57,9 @@ export default function Footer() {
             </a>
           </li>
         </ul>
+        <p className={styles.copyright}>
+          © {new Date().getFullYear()} Coskun Cakir.
+        </p>
       </Container>
     </footer>
   )

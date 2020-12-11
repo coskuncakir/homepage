@@ -4,7 +4,7 @@ module.exports = {
     titleTemplate: "%s",
     description:
       "I develop web applications with the latest and innovative technologies to make people’s life simple.",
-    image: "/assets/images/website_setup.png",
+    image: "/assets/images/avatar.jpg",
     twitterUsername: "@coscakir",
     siteUrl: `https://coskuncakir.com`,
   },

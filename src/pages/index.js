@@ -121,6 +121,7 @@ export const query = graphql`
   query {
     blog: allMdx(
       filter: { fileAbsolutePath: { glob: "**/src/data/blog/**/*.md" } }
+      sort: { fields: frontmatter___date, order: DESC }
       limit: 5
     ) {
       posts: edges {
@@ -137,6 +138,7 @@ export const query = graphql`
 
     note: allMdx(
       filter: { fileAbsolutePath: { glob: "**/src/data/notes/**/*.md" } }
+      sort: { fields: frontmatter___date, order: DESC }
       limit: 5
     ) {
       notes: edges {
@@ -153,6 +155,7 @@ export const query = graphql`
 
     openSource: allMdx(
       filter: { fileAbsolutePath: { glob: "**/src/data/projects/**/*.md" } }
+      sort: { fields: frontmatter___date, order: DESC }
       limit: 5
     ) {
       projects: edges {

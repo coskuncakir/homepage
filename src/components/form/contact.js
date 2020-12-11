@@ -5,7 +5,7 @@ import Button from "../button"
 import styles from "./contact.module.scss"
 
 export default function ContactForm() {
-  const [submitText, setSubmitText] = React.useState("Send!")
+  const [submitText, setSubmitText] = React.useState("Send")
 
   return (
     <form
@@ -22,7 +22,7 @@ export default function ContactForm() {
       <Input type="text" name="name" placeholder="Your name *" required />
       <Input type="email" name="email" placeholder="Your email *" required />
       <Textarea
-        placeholder="How can we help? *"
+        placeholder="How can i help? *"
         rows="4"
         name="message"
         spellCheck="false"

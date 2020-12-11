@@ -1,5 +1,5 @@
 .container {
-  max-width: 50rem;
+  max-width: var(--mw);
 }
 
 .hero {
@@ -46,6 +46,7 @@
 
   .date {
     color: var(--c-text-muted);
+    min-width: 80px;
   }
 }
 

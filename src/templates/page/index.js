@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import Container from "../components/container"
-import SEO from "../components/seo"
+import Layout from "../../components/layout"
+import Container from "../../components/container"
+import SEO from "../../components/seo"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Title from "../components/title"
+import Title from "../../components/title"
 import styles from "./page.module.scss"
 
 export default function PageTemplate({ data }) {

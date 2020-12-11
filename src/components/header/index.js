@@ -28,21 +28,6 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link to="/projects" activeClassName={styles.active}>
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link to="/reading" activeClassName={styles.active}>
-                  Reading
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" activeClassName={styles.active}>
-                  About
-                </Link>
-              </li>
-              <li>
                 <Link to="/contact" activeClassName={styles.active}>
                   Contact
                 </Link>

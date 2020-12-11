@@ -23,7 +23,10 @@ export default function Posts() {
 
 export const query = graphql`
   query {
-    allMdx(filter: { fileAbsolutePath: { glob: "**/src/data/blog/**/*.md" } }) {
+    allMdx(
+      filter: { fileAbsolutePath: { glob: "**/src/data/blog/**/*.md" } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       posts: edges {
         post: node {
           frontmatter {

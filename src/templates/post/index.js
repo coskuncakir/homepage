@@ -1,10 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import Container from "../components/container"
-import SEO from "../components/seo"
+import Layout from "../../components/layout"
+import Container from "../../components/container"
+import SEO from "../../components/seo"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Title from "../components/title"
+import Title from "../../components/title"
+import styles from "./post.module.scss"
 
 export default function PostTemplate({ data }) {
   const {
@@ -15,7 +16,7 @@ export default function PostTemplate({ data }) {
     <>
       <SEO title={frontmatter.title} />
       <Layout>
-        <Container>
+        <Container className={styles.container}>
           <Title headingLevel="h1">{frontmatter.title}</Title>
           <div>
             <MDXRenderer>{body}</MDXRenderer>

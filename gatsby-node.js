@@ -2,7 +2,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   // create pages
-  const pageTemplate = require.resolve(`./src/templates/page.js`)
+  const pageTemplate = require.resolve(`./src/templates/page/index.js`)
 
   const pagesQuery = await graphql(`
     {
@@ -37,7 +37,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
   // create posts
-  const postTemplate = require.resolve(`./src/templates/post.js`)
+  const postTemplate = require.resolve(`./src/templates/post/index.js`)
 
   const postsQuery = await graphql(`
     {
@@ -72,7 +72,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
   // create notes
-  const noteTemplate = require.resolve(`./src/templates/post.js`)
+  const noteTemplate = require.resolve(`./src/templates/post/index.js`)
 
   const notesQuery = await graphql(`
     {

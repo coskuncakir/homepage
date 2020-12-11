@@ -27,6 +27,7 @@ export const query = graphql`
   query {
     allMdx(
       filter: { fileAbsolutePath: { glob: "**/src/data/projects/**/*.md" } }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       projects: edges {
         project: node {
