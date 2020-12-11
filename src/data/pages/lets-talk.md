@@ -7,5 +7,6 @@ import Title from '../../components/title'
 import Link from '../../components/link'
 import ContactForm from '../../components/form/contact'
 
-<Title headingLevel="p">Want to get in touch? Send me an Email: <Link href="mailti:hello@coskuncakir.com">hello@coskuncakir.com</Link> or use the form below!</Title>
+<Title headingLevel="p">Send me an Email: <Link href="mailti:hello@coskuncakir.com">hello@coskuncakir.com</Link>
+or use the form below!</Title>
 <ContactForm />
