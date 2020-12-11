@@ -23,7 +23,7 @@ export default function Home({ data }) {
             </Title>
             <Title headingLevel="h1" className={styles.title}>
               I'm Coskun,
-              <br />I am a <span>Front-End Developer</span>
+              <br />I am a <mark>Front-End Developer</mark>
             </Title>
             <Title headingLevel="p">
               I develop web applications with the latest and innovative
