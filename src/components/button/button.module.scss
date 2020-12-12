@@ -56,4 +56,10 @@
     transform: perspective(1px) scale(0.975);
     box-shadow: 0 0 30px 0 var(--c-primary);
   }
+
+  &:disabled,
+  &:after,
+  &:before {
+    pointer-events: none;
+  }
 }

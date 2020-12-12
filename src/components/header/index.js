@@ -36,15 +36,16 @@ export default function Header() {
           </nav>
           <div className={styles.buttons}>
             <ThemeSwitcher />
-            <Hamburger
-              rounded
-              toggled={open}
-              toggle={setOpen}
-              label="Toggle menu"
-              distance="sm"
-              hideOutline={false}
-              className={styles.hamburger}
-            />
+            <span className={styles.hamburger}>
+              <Hamburger
+                rounded
+                toggled={open}
+                toggle={setOpen}
+                label="Toggle menu"
+                distance="sm"
+                hideOutline={false}
+              />
+            </span>
           </div>
         </div>
       </Container>

@@ -5,7 +5,7 @@ import Button from "../button"
 import styles from "./contact.module.scss"
 
 export default function ContactForm() {
-  const [submitText, setSubmitText] = React.useState("Send")
+  const [loading, setLoading] = React.useState(false)
 
   return (
     <form
@@ -15,7 +15,7 @@ export default function ContactForm() {
       method="POST"
       action="/thank-you"
       data-netlify="true"
-      onSubmit={e => setSubmitText("Sending...")}
+      onSubmit={e => setLoading(true)}
     >
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="Contact" />
@@ -29,7 +29,9 @@ export default function ContactForm() {
         required
       ></Textarea>
       <span>
-        <Button type="submit">{submitText}</Button>
+        <Button type="submit" disabled={loading}>
+          {loading ? "Sending..." : "Send"}
+        </Button>
       </span>
     </form>
   )
