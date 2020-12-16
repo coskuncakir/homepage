@@ -13,7 +13,7 @@ export default function Posts() {
     ))
   ) : (
     <p style={{ color: "var(--c-text-muted)" }}>
-      No notes scheduled for takeoff
+      No posts scheduled for takeoff
     </p>
   )
 }

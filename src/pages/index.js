@@ -54,7 +54,7 @@ export default function Home() {
               ))
             ) : (
               <p className={styles.emptyState}>
-                No notes scheduled for takeoff
+                No posts scheduled for takeoff
               </p>
             )}
 
