@@ -19,7 +19,7 @@ export default function Avatar() {
 
 export const query = graphql`
   query {
-    avatar: file(relativePath: { eq: "icon.png" }) {
+    avatar: file(relativePath: { eq: "avatar.jpg" }) {
       sharp: childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
