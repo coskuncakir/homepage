@@ -3,7 +3,7 @@
   border-radius: 28px;
   background-color: var(--c-primary);
   border: 0;
-  padding: 0.8rem 1.3rem;
+  padding: 1rem 1.5rem;
   color: white;
   cursor: pointer;
   text-align: center;
@@ -11,13 +11,8 @@
   position: relative;
   z-index: 1;
 
-  @media (min-width: 992px) {
-    padding: 0.85rem 1.5rem;
-  }
-
   @media (min-width: 1522px) {
     font-size: 1.125rem;
-    padding: 0.8611rem 1.55rem;
   }
 
   &:after,
