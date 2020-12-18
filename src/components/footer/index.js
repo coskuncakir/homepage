@@ -10,17 +10,29 @@ export default function Footer() {
       <Container className={styles.container}>
         <ul className={styles.menu}>
           <li>
-            <Link to="/projects" defaultLink={false}>
+            <Link
+              to="/projects"
+              defaultLink={false}
+              activeClassName={styles.active}
+            >
               Projects
             </Link>
           </li>
           <li>
-            <Link to="/reading" defaultLink={false}>
+            <Link
+              to="/reading"
+              defaultLink={false}
+              activeClassName={styles.active}
+            >
               Reading
             </Link>
           </li>
           <li>
-            <Link to="/about" defaultLink={false}>
+            <Link
+              to="/about"
+              defaultLink={false}
+              activeClassName={styles.active}
+            >
               About
             </Link>
           </li>

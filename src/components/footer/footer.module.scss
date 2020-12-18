@@ -33,7 +33,8 @@
 
   li {
     a {
-      &:hover {
+      &:hover,
+      &.active {
         color: var(--c-primary);
       }
     }
