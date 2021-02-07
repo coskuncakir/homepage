@@ -1,12 +1,6 @@
 .logo {
   display: flex;
   align-items: center;
-
-  &:hover {
-    .oval {
-      transform: translateX(-50%) translateY(-50%) rotate(180deg);
-    }
-  }
 }
 
 .avatar {
@@ -26,14 +20,16 @@
   overflow: hidden;
   width: 48px;
   height: 48px;
+  div {
+    transition: all 0.3s ease-in-out 0.3s;
+  }
 }
 
 .oval {
   position: absolute;
   left: 50%;
   top: 50%;
-  transition: all 0.3s ease-in-out 0.3s;
-  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  transform: translateX(-50%) translateY(-50%);
   display: flex;
   flex-direction: row;
   align-items: center;
