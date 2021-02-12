@@ -40,7 +40,7 @@ export default function Footer() {
         <ul className={styles.socialLinks}>
           <li>
             <a
-              href="https://twitter.com/coscakir"
+              href="https://twitter.com/coskuncakir_"
               target="_blank"
               rel="noopener noreferrer"
               title="Twitter"

@@ -5,7 +5,7 @@ module.exports = {
     description:
       "I develop web applications with the latest and innovative technologies to make people’s life simple.",
     image: "/assets/images/avatar.jpg",
-    twitterUsername: "@coscakir",
+    twitterUsername: "@coskuncakir_",
     siteUrl: `https://coskuncakir.com`,
   },
   plugins: [
