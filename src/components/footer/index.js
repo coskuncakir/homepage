@@ -50,7 +50,7 @@ export default function Footer() {
           </li>
           <li>
             <a
-              href="https://github.com/coscakir"
+              href="https://github.com/coskuncakir"
               target="_blank"
               rel="noopener noreferrer"
               title="GitHub"

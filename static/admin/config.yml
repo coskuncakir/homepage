@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: coscakir/homepage
+  repo: coskuncakir/homepage
 media_folder: static/assets/images/uploads
 public_folder: /assets/images/uploads
 collections:
