@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import Layout from "../../components/layout"
 import Container from "../../components/container"
 import SEO from "../../components/seo"
@@ -7,23 +7,24 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Title from "../../components/title"
 import styles from "./post.module.scss"
 
-export default function PostTemplate({ data }) {
-  const {
-    mdx: { frontmatter, body },
-  } = data
-
+export default function PostTemplate() {
   return (
-    <>
-      <SEO title={frontmatter.title} />
-      <Layout>
-        <Container className={styles.container}>
-          <Title headingLevel="h1">{frontmatter.title}</Title>
-          <div>
-            <MDXRenderer>{body}</MDXRenderer>
-          </div>
-        </Container>
-      </Layout>
-    </>
+    <StaticQuery
+      query={query}
+      render={data => (
+        <>
+          <SEO title={data.mdx.frontmatter.title} />
+          <Layout>
+            <Container className={styles.container}>
+              <Title headingLevel="h1">{data.mdx.frontmatter.title}</Title>
+              <div>
+                <MDXRenderer>{data.mdx.body}</MDXRenderer>
+              </div>
+            </Container>
+          </Layout>
+        </>
+      )}
+    />
   )
 }
 export const query = graphql`

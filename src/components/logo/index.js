@@ -6,20 +6,14 @@ import cn from "classnames"
 import styles from "./logo.module.scss"
 
 export default function Logo({ className }) {
-  const [avatarHover, setAvatarHover] = React.useState(false)
   return (
-    <Link
-      to="/"
-      className={cn(styles.logo, className)}
-      onMouseEnter={() => setAvatarHover(true)}
-      onMouseLeave={() => setAvatarHover(false)}
-    >
+    <Link to="/" className={cn(styles.logo, className)}>
       <div className={styles.avatar}>
         <div className={styles.oval}>
           <OvalBorder />
         </div>
         <div className={styles.image}>
-          <Avatar hover={avatarHover} />
+          <Avatar />
         </div>
       </div>
       <div className={styles.title}>

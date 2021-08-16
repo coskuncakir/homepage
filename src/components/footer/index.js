@@ -20,15 +20,6 @@ export default function Footer() {
           </li>
           <li>
             <Link
-              to="/reading"
-              defaultLink={false}
-              activeClassName={styles.active}
-            >
-              Reading
-            </Link>
-          </li>
-          <li>
-            <Link
               to="/about"
               defaultLink={false}
               activeClassName={styles.active}

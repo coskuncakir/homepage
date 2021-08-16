@@ -40,13 +40,6 @@ module.exports = {
       },
     },
     {
-      resolve: "@jamesdanylik/gatsby-source-goodreads",
-      options: {
-        key: "45vD5s0OBPw0OMXApqtZw",
-        id: "61767082-coskun-cakir",
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
