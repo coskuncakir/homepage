@@ -3,18 +3,6 @@
   align-items: center;
 }
 
-.avatar {
-  display: none;
-  margin-right: 1rem;
-  position: relative;
-  width: 48px;
-  height: 48px;
-
-  @media (min-width: 576px) {
-    display: flex;
-  }
-}
-
 .image {
   border-radius: 50%;
   overflow: hidden;
@@ -22,23 +10,6 @@
   height: 48px;
   div {
     transition: all 0.3s ease-in-out 0.3s;
-  }
-}
-
-.oval {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  svg {
-    width: 57px;
-    height: 57px;
-    color: var(--c-primary);
   }
 }
 
